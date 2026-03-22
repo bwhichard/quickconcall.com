@@ -129,99 +129,17 @@ body {
   color: var(--text-sub);
 }
 
-/* ── Phone mockup ── */
+/* ── App screenshot ── */
 .hero-image {
   display: flex;
   justify-content: center;
 }
 
-.phone-mockup {
+.app-screenshot {
   width: 280px;
-  background: #1C1C1E;
   border-radius: 44px;
-  padding: 16px;
-  box-shadow: 0 30px 80px rgba(0,0,0,0.18), 0 0 0 1px rgba(255,255,255,0.08);
-}
-
-.phone-screen {
-  background: #F2F2F7;
-  border-radius: 32px;
-  overflow: hidden;
-  padding: 20px 0 8px;
-  min-height: 480px;
-}
-
-.mock-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 20px 16px;
-  border-bottom: 1px solid #D1D1D6;
-}
-
-.mock-title {
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: #1C1C1E;
-}
-
-.mock-plus {
-  font-size: 1.5rem;
-  color: #007AFF;
-  font-weight: 300;
-  line-height: 1;
-}
-
-.mock-calls {
-  padding: 0;
-}
-
-.mock-call {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 14px 20px;
-  background: #fff;
-  margin: 0;
-  border-bottom: 1px solid #F2F2F7;
-}
-
-.mock-dial {
-  font-size: 1.4rem;
-  color: #34C759;
-  line-height: 1;
-  flex-shrink: 0;
-}
-
-.mock-info {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-  min-width: 0;
-}
-
-.mock-name {
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: #1C1C1E;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.mock-sub {
-  font-size: 0.7rem;
-  color: #8E8E93;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.mock-arrow {
-  color: #C7C7CC;
-  font-size: 1.1rem;
-  flex-shrink: 0;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.18);
+  display: block;
 }
 
 /* ── Features ── */
@@ -371,7 +289,7 @@ footer a:hover { color: var(--blue); }
 
   .hero-image { order: -1; }
 
-  .phone-mockup { width: 240px; }
+  .app-screenshot { width: 240px; }
 
   .feature-grid {
     grid-template-columns: 1fr;
