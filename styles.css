@@ -1,0 +1,390 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --green: #34C759;
+  --green-dark: #2aA84A;
+  --blue: #007AFF;
+  --blue-dark: #0062cc;
+  --text: #1C1C1E;
+  --text-sub: #6E6E73;
+  --bg: #FFFFFF;
+  --bg-alt: #F5F5F7;
+  --border: #D1D1D6;
+  --radius: 16px;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ── Nav ── */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
+}
+
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 56px;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: -0.02em;
+  color: var(--text);
+}
+
+/* ── Buttons ── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  border-radius: 100px;
+  text-decoration: none;
+  transition: background 0.15s, transform 0.1s;
+  cursor: pointer;
+  border: none;
+}
+
+.btn:active { transform: scale(0.97); }
+
+.btn-small {
+  background: var(--blue);
+  color: #fff;
+  font-size: 0.875rem;
+  padding: 8px 18px;
+}
+
+.btn-small:hover { background: var(--blue-dark); }
+
+.btn-large {
+  background: var(--blue);
+  color: #fff;
+  font-size: 1.05rem;
+  padding: 14px 28px;
+}
+
+.btn-large:hover { background: var(--blue-dark); }
+
+.btn-white {
+  background: #fff;
+  color: var(--blue);
+}
+
+.btn-white:hover { background: #f0f4ff; }
+
+/* ── Hero ── */
+.hero {
+  padding: 80px 0 60px;
+  overflow: hidden;
+}
+
+.hero-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.hero-text h1 {
+  font-size: clamp(2.2rem, 5vw, 3.2rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+  margin-bottom: 20px;
+  color: var(--text);
+}
+
+.lead {
+  font-size: 1.15rem;
+  color: var(--text-sub);
+  margin-bottom: 32px;
+  max-width: 480px;
+}
+
+.sub {
+  margin-top: 12px;
+  font-size: 0.875rem;
+  color: var(--text-sub);
+}
+
+/* ── Phone mockup ── */
+.hero-image {
+  display: flex;
+  justify-content: center;
+}
+
+.phone-mockup {
+  width: 280px;
+  background: #1C1C1E;
+  border-radius: 44px;
+  padding: 16px;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.18), 0 0 0 1px rgba(255,255,255,0.08);
+}
+
+.phone-screen {
+  background: #F2F2F7;
+  border-radius: 32px;
+  overflow: hidden;
+  padding: 20px 0 8px;
+  min-height: 480px;
+}
+
+.mock-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px 16px;
+  border-bottom: 1px solid #D1D1D6;
+}
+
+.mock-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1C1C1E;
+}
+
+.mock-plus {
+  font-size: 1.5rem;
+  color: #007AFF;
+  font-weight: 300;
+  line-height: 1;
+}
+
+.mock-calls {
+  padding: 0;
+}
+
+.mock-call {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 20px;
+  background: #fff;
+  margin: 0;
+  border-bottom: 1px solid #F2F2F7;
+}
+
+.mock-dial {
+  font-size: 1.4rem;
+  color: #34C759;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.mock-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.mock-name {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #1C1C1E;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.mock-sub {
+  font-size: 0.7rem;
+  color: #8E8E93;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.mock-arrow {
+  color: #C7C7CC;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+/* ── Features ── */
+.features {
+  background: var(--bg-alt);
+  padding: 80px 0;
+}
+
+.features h2, .how h2, .cta h2 {
+  text-align: center;
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 48px;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.feature-card {
+  background: #fff;
+  border-radius: var(--radius);
+  padding: 28px;
+  border: 1px solid var(--border);
+}
+
+.feature-icon {
+  font-size: 1.8rem;
+  margin-bottom: 12px;
+}
+
+.feature-card h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.feature-card p {
+  font-size: 0.9rem;
+  color: var(--text-sub);
+  line-height: 1.55;
+}
+
+/* ── How it works ── */
+.how {
+  padding: 80px 0;
+}
+
+.how-inner {
+  max-width: 640px;
+}
+
+.steps {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.steps li {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.step-num {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--blue);
+  color: #fff;
+  font-weight: 700;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2px;
+}
+
+.steps h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.steps p {
+  font-size: 0.9rem;
+  color: var(--text-sub);
+}
+
+/* ── CTA ── */
+.cta {
+  background: var(--blue);
+  padding: 80px 0;
+  text-align: center;
+  color: #fff;
+}
+
+.cta h2, .cta p {
+  color: #fff;
+}
+
+.cta h2 { margin-bottom: 12px; }
+
+.cta p {
+  font-size: 1.05rem;
+  opacity: 0.85;
+  margin-bottom: 32px;
+}
+
+/* ── Footer ── */
+footer {
+  background: var(--bg-alt);
+  border-top: 1px solid var(--border);
+  padding: 28px 0;
+}
+
+.footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  font-size: 0.875rem;
+  color: var(--text-sub);
+}
+
+footer a {
+  color: var(--text-sub);
+  text-decoration: none;
+}
+
+footer a:hover { color: var(--blue); }
+
+/* ── Responsive ── */
+@media (max-width: 760px) {
+  .hero { padding: 48px 0 40px; }
+
+  .hero-inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .hero-image { order: -1; }
+
+  .phone-mockup { width: 240px; }
+
+  .feature-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  .feature-grid {
+    grid-template-columns: 1fr;
+  }
+}
