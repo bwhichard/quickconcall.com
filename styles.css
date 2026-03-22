@@ -136,9 +136,7 @@ body {
 }
 
 .app-screenshot {
-  width: 280px;
-  border-radius: 44px;
-  box-shadow: 0 30px 80px rgba(0,0,0,0.18);
+  width: 300px;
   display: block;
 }
 
@@ -289,7 +287,7 @@ footer a:hover { color: var(--blue); }
 
   .hero-image { order: -1; }
 
-  .app-screenshot { width: 240px; }
+  .app-screenshot { width: 220px; }
 
   .feature-grid {
     grid-template-columns: 1fr;
